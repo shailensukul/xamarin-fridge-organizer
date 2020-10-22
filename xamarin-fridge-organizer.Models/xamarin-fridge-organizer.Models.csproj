@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>xamarin_fridge_organizer.Models</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\xamarin-fridge-organizer.Interfaces\xamarin-fridge-organizer.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

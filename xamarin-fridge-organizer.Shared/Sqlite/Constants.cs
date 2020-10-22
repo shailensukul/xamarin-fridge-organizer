@@ -1,8 +1,8 @@
-﻿using System;
-using System.IO;
-
-namespace xamarin_fridge_organizer.Shared
+﻿namespace xamarin_fridge_organizer.Shared.Sqlite
 {
+    using System;
+    using System.IO;
+
     public static class Constants
     {
         public const string DatabaseFilename = "TodoSQLite.db3";
