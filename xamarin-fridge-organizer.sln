@@ -9,11 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xamarin-fridge-organizer.iO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xamarin-fridge-organizer", "xamarin-fridge-organizer\xamarin-fridge-organizer.csproj", "{B4723E95-2F8D-40CC-B658-D79DB1D30875}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xamarin-fridge-organizer.Shared", "..\xamarin-fridge-organizer.Shared\xamarin-fridge-organizer.Shared.csproj", "{30F2441B-3129-47FB-B2F1-940B7DC99127}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xamarin-fridge-organizer.Shared", "xamarin-fridge-organizer.Shared\xamarin-fridge-organizer.Shared.csproj", "{30F2441B-3129-47FB-B2F1-940B7DC99127}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xamarin-fridge-organizer.Models", "..\xamarin-fridge-organizer.Models\xamarin-fridge-organizer.Models.csproj", "{6CBE022D-CB39-4BDA-954C-B5410CC5EF2C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xamarin-fridge-organizer.Models", "xamarin-fridge-organizer.Models\xamarin-fridge-organizer.Models.csproj", "{6CBE022D-CB39-4BDA-954C-B5410CC5EF2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xamarin-fridge-organizer.Interfaces", "..\xamarin-fridge-organizer.Interfaces\xamarin-fridge-organizer.Interfaces.csproj", "{F0AA373D-46D1-4BD1-941C-2D1828CDB382}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xamarin-fridge-organizer.Interfaces", "xamarin-fridge-organizer.Interfaces\xamarin-fridge-organizer.Interfaces.csproj", "{F0AA373D-46D1-4BD1-941C-2D1828CDB382}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
