@@ -2,7 +2,7 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:xamarin_fridge_organizer.Views"
-       Title="xamarin_fridge_organizer"
+       Title="Xamarin Fridge Organizer"
        x:Class="xamarin_fridge_organizer.AppShell">
 
     <!--
