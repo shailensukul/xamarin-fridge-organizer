@@ -8,8 +8,11 @@ namespace xamarin_fridge_organizer.Interfaces.Models
     {
         Guid Id { get; set; }
 
-        string User { get; set; }
+        string UserCreated { get; set; }
+        string UserUpdated { get; set; }
 
         DateTime UpdatedDate { get; set; }
+
+        DateTime CreatedDate { get; set; }
     }
 }

@@ -6,6 +6,7 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using xamarin_fridge_organizer.Interfaces.Models;
     using xamarin_fridge_organizer.Models;
 
     public sealed class FridgeOrganizerDatebase
@@ -31,27 +32,33 @@
                 {
                     await Database.CreateTablesAsync(CreateFlags.None, typeof(FridgeItem)).ConfigureAwait(false);
                 }
+
+                if (!Database.TableMappings.Any(m => m.MappedType.Name == typeof(Category).Name))
+                {
+                    await Database.CreateTablesAsync(CreateFlags.None, typeof(Category)).ConfigureAwait(false);
+                }
                 initialized = true;
             }
         }
 
-        public Task<List<FridgeItem>> GetItemsAsync()
+        #region FridgeItem
+        public Task<List<T>> GetItemsAsync<T>() where T: IItem, new()
         {
-            return Database.Table<FridgeItem>().ToListAsync();
+            return Database.Table<T>().ToListAsync();
         }
 
-        public Task<List<FridgeItem>> GetExpiredItems()
+        //public Task<List<FridgeItem>> GetExpiredItems()
+        //{
+        //    // SQL queries are also possible
+        //    return Database.QueryAsync<FridgeItem>("SELECT * FROM [FridgeItem] WHERE [Expiry] IS NOT NULL AND [Expiry] < date('now')");
+        //}
+
+        public Task<T> GetItemAsync<T>(Guid id) where T : IItem, new()
         {
-            // SQL queries are also possible
-            return Database.QueryAsync<FridgeItem>("SELECT * FROM [FridgeItem] WHERE [Expiry] IS NOT NULL AND [Expiry] < date('now')");
+            return Database.Table<T>().Where(i => i.Id == id).FirstOrDefaultAsync();
         }
 
-        public Task<FridgeItem> GetItemAsync(Guid id)
-        {
-            return Database.Table<FridgeItem>().Where(i => i.Id == id).FirstOrDefaultAsync();
-        }
-
-        public Task<int> SaveItemAsync(FridgeItem item)
+        public Task<int> SaveItemAsync<T>(T item) where T : IItem, new()
         {
             if (Guid.Empty != item.Id)
             {
@@ -63,9 +70,12 @@
             }
         }
 
-        public Task<int> DeleteItemAsync(FridgeItem item)
+        public Task<int> DeleteItemAsync<T>(T item) where T : IItem, new()
         {
             return Database.DeleteAsync(item);
         }
-    }
+
+        #endregion
+
+   }
 }

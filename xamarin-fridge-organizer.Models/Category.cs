@@ -4,20 +4,10 @@
     using System.Runtime.Serialization;
     using xamarin_fridge_organizer.Interfaces.Models;
 
-    [DataContract(Name = "FridgeItem", Namespace ="urn:DataModels")]
-    public sealed class FridgeItem : IItem
+    public sealed class Category : IItem
     {
         [DataMember]
-        public string User { get; set; }
-
-        [DataMember]
-        public string BarCode { get; set; }
-
-        [DataMember]
-        public string Related { get; set; }
-
-        [DataMember]
-        public string Category { get; set; }
+        public string Name { get; set; }
 
         [DataMember]
         public Guid Id { get; set; }
