@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A0343D17-4C04-46B0-A43C-A834544814D1}</ProjectGuid>
+    <ProjectGuid>{890A0955-C306-4B90-A5AC-863C5D017854}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{6968b3a4-1835-46a3-ac5c-1ae33b475983}</TemplateGuid>
     <OutputType>Library</OutputType>
@@ -90,7 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\xamarin-fridge-organizer\xamarin-fridge-organizer.csproj">
-      <Project>{BD7888B6-51B1-41E3-AE22-34B7AE46ADB4}</Project>
+      <Project>{55248015-8826-46E7-93C8-CD3159CF51C9}</Project>
       <Name>xamarin-fridge-organizer</Name>
     </ProjectReference>
   </ItemGroup>
